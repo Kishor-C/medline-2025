@@ -1,0 +1,15 @@
+@use "sass:math";
+
+$highlight : yellow;
+
+$column: 12;
+.col-6 {
+    width: math.div(6, $column) * 100%;
+}
+.col-5 {
+    width: math.div(5, $column) * 100%;
+}
+div {
+    background-color: $highlight;
+    border: 2px solid black;
+}
