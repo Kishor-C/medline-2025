@@ -1,0 +1,19 @@
+.title {
+    color: blue;
+}
+.sub-title {
+    color: red;
+}
+@media (max-width:500px) {
+    .title {
+        color: red;
+    }
+    .sub-title {
+        color: blue;
+    }
+}
+@media print {
+    .title, .sub-title {
+        color: black;
+    }
+}
