@@ -2,6 +2,34 @@
 
 $highlight : yellow;
 
+.alert {
+    &:hover {
+        color: $highlight;
+    }
+}
+.text {
+    &-primary { color: blue;}
+    &-danger { color: red; }
+    &-info { color: orange;}
+}
+
+
+@mixin shape($color, $width, $height) {
+    width: $width;
+    height: $height;
+    background-color: $color;
+}
+
+.square {
+    @include shape(blue, 400px, 400px);
+    border: 2px solid black;
+}
+.rectangle {
+    @include shape(red,400px, 200px);
+}
+
+
+
 $column: 12;
 .col-6 {
     width: math.div(6, $column) * 100%;

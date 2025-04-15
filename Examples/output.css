@@ -1,3 +1,30 @@
+.alert:hover {
+  color: yellow;
+}
+
+.text-primary {
+  color: blue;
+}
+.text-danger {
+  color: red;
+}
+.text-info {
+  color: orange;
+}
+
+.square {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  border: 2px solid black;
+}
+
+.rectangle {
+  width: 400px;
+  height: 200px;
+  background-color: red;
+}
+
 .col-6 {
   width: 50%;
 }
