@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Operators</h1>
+    <script type="text/javascript">
+        var price = 1000;
+        var gst = 18 / 100;
+        var totalPrice = price + (price * gst);
+        document.write("<h2>Total="+totalPrice+"<br/>");
+        var counter = 1;
+        var anotherCounter = counter++;//post-increment
+        document.write("AnthrCtr="+(anotherCounter)+"<br/>");
+        document.write("Counter="+counter+"<br/>");
+        var age = 65;
+        var eligibilityForPension=58;
+        var status = age >= eligibilityForPension;
+        document.write("Is Eligible for pension="+status);
+        var empId = "123";
+        var empId2 = 123;
+        var equality = empId == empId2;
+        document.write("<br/>Equality="+equality);
+        document.write("<br/>Exactly Equal="+(empId===empId2));
+        var marks1 = 65;
+        var marks2 = 50;
+        var result = marks1 >= 60 && marks2 >= 60;
+        document.write("<br/>Is passed="+result);
+        var result2 = marks1 >= 60 || marks2 >= 60;
+        document.write("<br/>Is passed="+result2+"</h2>");
+    </script>
+</body>
+</html>
