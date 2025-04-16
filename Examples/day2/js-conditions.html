@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Conditions</h2>
+    <script type="text/javascript">
+        // dynamic values using prompt()
+        var input1 = prompt("Enter a number");
+        var result = parseInt(input1);//prompt gives string
+        if(result >= 75) {
+            document.write("Result is FCD<br/>");
+        } else if(result < 75 && result >= 60){
+            document.write("Result is FC<br/>")
+        } else if(result < 60 && result >= 50) {
+            document.write("Result is SC<br/>")
+        } else { 
+            document.write("Result is failed<br/>")
+        }
+        // switch cases
+        var input2 = prompt("Enter your option");
+        switch(input2) {
+            case "1": document.write("Have a coffee<br/>");
+            break;
+            case "2": document.write("<br/>Have a cold drink<br/>");
+            break;
+            case "3": document.write("Have a tea<br/>");
+            break;
+            default: document.write("Invalid option<br/>");
+        }
+        // ternary operator similar to if else
+        document.write((result > 50) ? "Pass": "Failed");
+    </script>
+</body>
+</html>
