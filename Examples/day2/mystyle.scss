@@ -1,0 +1,19 @@
+$colors : red, green, blue;
+%common-styles {
+    background-color: mix(yellow, orange,50%);
+    text-align: center;
+    border: 2px solid black;
+    padding: 2px;
+}
+.primary {
+    @extend %common-styles;
+    color: nth($colors, 3);
+}
+.error {
+    @extend %common-styles;
+    color: nth($colors, 1);
+}
+.warning {
+    @extend %common-styles;
+    color: nth($colors, 2);
+}

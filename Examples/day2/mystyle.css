@@ -1,0 +1,20 @@
+.warning, .error, .primary {
+  background-color: #ffd200;
+  text-align: center;
+  border: 2px solid black;
+  padding: 2px;
+}
+
+.primary {
+  color: blue;
+}
+
+.error {
+  color: red;
+}
+
+.warning {
+  color: green;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
