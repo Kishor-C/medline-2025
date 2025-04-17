@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript objects with literal and functional style</h1><hr />
+    <script type = "text/javascript">
+        // date must be in ISO format = yyyy-MM-dd
+        var user = {
+            userId: 200, name: "Alex", dob: new Date("2000-10-20"),
+            display : function() {
+                return "Id = "+this.userId+", Name = "+this.name+", Dob = "+this.dob.toLocaleDateString();
+            }
+        };
+        document.write(user.display());
+        // function style object with object constructor
+        function Employee(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+            // to create a function inside the Employee
+            this.updateSalary = function(salary) {
+                this.salary = salary;
+            }
+            this.information = function() { 
+                return "Id = "+this.id+", Name = "+this.name+", Salary = "+this.salary;
+            }
+        }
+        // object from the Employee() function
+        var emp1 = new Employee(123, "Ajay", 34500);
+        var emp2 = new Employee(456, "Rajesh", 40000);
+        document.write('<p>'+emp1.information()+'</p>');
+        emp1.updateSalary(50000);
+        document.write('<p>'+emp1.information()+'</p>');
+        document.write('<p>'+emp2.information()+'</p>');
+        emp1.updateSalary2(80000);
+    </script>
+</body>
+</html>

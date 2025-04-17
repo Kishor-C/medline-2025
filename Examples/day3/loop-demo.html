@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop Example</h1>
+    <script type = "text/javascript">
+        // for(init; condition; expr)
+        for(var i = 1; i <= 5; ++i) {
+            document.write('<p>i = '+i+'</p>');
+        }
+        // while & do while
+        // while loop runs until condition is true, like reading files until the last 
+        // character
+        var counter = 5;
+        while(counter < 10) {
+            document.write('<p>counter = '+counter+'</p>');
+            counter++;
+        }
+        // do while - at least once it runs and then checks the condition
+        var anotherCounter = 5;
+        do {
+            document.write('<p>another counter = '+anotherCounter+'</p>');
+            anotherCounter++;
+        } while(anotherCounter <= 5 );
+    </script>
+</body>
+</html>
