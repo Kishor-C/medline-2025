@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Arrays</h2>
+    <script type = "text/javascript">
+        var numbers = [7, 1, 3, 2, 6, 5];
+        var fruits = ["apple", "orange", "gauva", "watermelon", "grapes", "mango"]; // in js you use [] to create arrays
+        document.write("<p>Numbers = "+numbers+"</p>");
+        numbers.sort();
+        document.write("<p>Numbers after sort() = "+numbers+"</p>");
+        // sorting in descending order needs to be done by passing an anonymous function to the sort
+        numbers.sort(function(x, y){
+            return y - x;
+        });
+        document.write("<p>Numbers again after sort() = "+numbers+"</p>");
+        document.write("<p>Fruits = "+fruits+"</p>");
+        fruits.sort(); // sorting the array
+        document.write("<p>Fruits after sort = "+fruits+"</p>");
+        // sorting the string
+        fruits.sort(function(x, y){
+            return y.localeCompare(x);
+        });
+        document.write("<p>Fruits again after sort = "+fruits+"</p>");
+        fruits.push("pipeapple"); // add an element to an existing array
+        document.write("<p>Fruits = "+fruits+"</p>");
+        document.write("<p>Popped: "+fruits.pop()+"</p>");// removing the elemnets using pop
+        document.write("<p>Fruits = "+fruits+"</p>");
+        var slice = fruits.slice(0, 2); // returns portion of an array
+        document.write("<p>Sliced elements = "+slice+"</p>");
+        document.write("<p>Fruits = "+fruits+"</p>");
+        var spliced = fruits.splice(1, 3); // removes 3 elements from 1st index
+        document.write("<p>Fruits after splice(1, 3) = "+fruits+"</p>");
+    </script>
+</body>
+</html>

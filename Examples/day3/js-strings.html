@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>String example</h2>
+    <script type="text/javascript">
+        var email = "kishor@gmail.com";
+        document.write("<p>@ is at index:"+email.indexOf('@')+"</p>");
+        var username = email.substring(0, email.indexOf('@'));
+        document.write("<p>Username = "+username+"</p>");
+        var domain = email.substring(email.indexOf('@')+1, email.lastIndexOf('.'));
+        document.write("<p>Domain = "+domain+"</p>");
+        document.write("<p>Username in caps: "+username.toUpperCase()+"</p>");
+        var text = "Hello Everyone";
+        document.write("<p>Text in lower case: "+text.toLowerCase()+"</p>");
+        document.write("<p>Char at 1st position: "+username.charAt(0)+"</p>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Inheritance with prototype</h2>
+    <script type = "text/javascript">
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.display = function() {
+            return "Name="+this.name+", Age="+this.age;
+        }
+        function Student(rollno, name, age) {
+            Person.call(this, name, age);
+            this.rollno = rollno;
+        }
+        // to inherit
+        Student.prototype = Object.create(Person.prototype);
+        var student1 = new Student(1234, 'Ajay', 20);
+        document.write('<p>'+student1.display()+'</p>');
+    </script>
+</body>
+</html>

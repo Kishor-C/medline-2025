@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS complex type sorting</h2>
+    <script type = "text/javascript">
+        var employees = [
+        {id: 100, name: "Zaheer", dob: new Date("1988-10-25")},
+        {id: 500, name: "Sachin", dob: new Date("1985-11-24")},
+        {id: 300, name: "Virat", dob: new Date("1989-11-20")},
+        {id: 400, name: "Dhoni", dob: new Date("1987-09-25")},
+        {id: 200, name: "Rohith", dob: new Date("1990-10-25")},
+        ];
+        printEmployees(employees);
+        employees.sort(function(x, y) {
+           // return x.id - y.id; // compare employee ids
+           return x.dob - y.dob; // to compare date object
+        });
+        document.write("<p>***********************</p>");
+        printEmployees(employees);
+        function printEmployees(items) {
+            // for of to iterate the arrays
+            for(var item of items) {
+                document.write("<p>Id="+item.id+", Name="+item.name+
+                    ",Dob="+item.dob.toLocaleDateString()+"</p>");
+            }
+        }
+    </script>
+</body>
+</html>
