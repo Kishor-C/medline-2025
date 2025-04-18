@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Events</h2>
+    <input type = "text" name = "user" oninput="printValue(event)" />
+    <button onclick="incrementCounter()">Click</button>
+    <p id = "p1" onclick="handleMouseEvent(event)">Counter = 0</p>
+    <script type = "text/javascript">
+        var counter = 0;
+        function handleMouseEvent(e) {
+            var ele = e.target;
+            console.log(ele.textContent);
+            ele.textContent = 'mouse over on p'
+            ele.style.color = "red";
+            ele.style.backgroundColor = "yellow";
+        }
+        function printValue(e) {
+            console.log(e.target.value);
+        }
+        function incrementCounter() {
+            var para = document.getElementById("p1");
+            counter++;
+            para.textContent = 'Counter = '+counter;
+        }
+    </script>
+</body>
+</html>
