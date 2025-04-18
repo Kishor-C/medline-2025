@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success {
+            color : green;
+        }
+        .danger {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Getting the elements using different methods</h2>
+    <div id = "d1">Element selected: </div>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <button onclick="handleClick()">Click</button>
+    <script type = "text/javascript">
+        function handleClick() {
+            var ele = document.querySelectorAll("p");
+            var divEle = document.querySelector("#d1");
+            for(var e of ele) {
+                if(e.classList.value == 'success') {
+                    e.classList.add('danger');
+                    e.classList.remove('success');
+                }
+                else {
+                    e.classList.add('success');
+                    e.classList.remove('danger');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
