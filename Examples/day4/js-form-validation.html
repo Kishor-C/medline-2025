@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .danger {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Validation</h2>
+    <form action="#" method = "post" onsubmit="return validateForm()">
+        <label>
+            Enter Username
+            <input type = "text" name = "user" oninput="validateForm()" autocomplete="off"/>
+        </label>
+        <br />
+        <input type = "submit" value = "Register">
+        <div>
+            <p id = "usernameError"></p>
+        </div>
+    </form>
+    <script type = "text/javascript">
+        function validateForm() {
+            var usernameInput = document.forms[0].user;
+            var usernameErrorEle = document.querySelector("#usernameError");
+            if(usernameInput.value.length == 0) {
+                usernameErrorEle.innerHTML = '&#10006; '+'Username is required';
+                usernameErrorEle.classList.add('danger');
+                usernameErrorEle.classList.remove('success');
+                return false;
+            } else {
+                usernameErrorEle.innerHTML = '&#10004; '+'Username is required';
+                usernameErrorEle.classList.add('success');
+                usernameErrorEle.classList.remove('danger');
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
