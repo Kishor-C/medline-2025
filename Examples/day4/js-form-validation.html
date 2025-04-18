@@ -5,30 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .danger {
-            color: red;
-        }
-        .success {
-            color: green;
-        }
+        .danger { color: red; }
+        .success { color: green; }
     </style>
 </head>
-
 <body>
     <h2>Form Validation</h2>
     <form action="#" method = "post" onsubmit="return validateForm()">
-        <label>
-            Enter Username
-            <input type = "text" name = "user" oninput="validateForm()" autocomplete="off"/>
-        </label>
-        <br />
+        <label> Enter Username<input type = "text" name = "user" oninput="validateForm()" autocomplete="off"/></label><br />
         <input type = "submit" value = "Register">
-        <div>
-            <p id = "usernameError"></p>
-        </div>
+        <div><p id = "usernameError"></p></div>
     </form>
     <script type = "text/javascript">
+         var pattern = /a(=?b)/;
+         console.log(pattern.test('atab'));
         function validateForm() {
+            // you can use regular expression in javascript
+           
             var usernameInput = document.forms[0].user;
             var usernameErrorEle = document.querySelector("#usernameError");
             if(usernameInput.value.length == 0) {
