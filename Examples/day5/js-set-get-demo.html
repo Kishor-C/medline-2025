@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.pname = name;
+                this.Demo = class {
+                    constructor(gender) {
+                        this.gender = gender;
+                        console.log("Demo is inside Person class")
+                    }
+                }
+            }
+            
+            set name(name) {
+                console.log('set name is called');
+                if(name.length == 0) {
+                    this.pname = 'Guest';
+                } else {
+                    this.pname = name;
+                }
+            }
+            get name() {
+                console.log('getter is called: '+this.pname);
+                return this.pname;
+            }
+        }
+        let px = new Person("Kishor");
+        px.name = 'KKK'; // px.setname("KKK") or name("KKK")
+        console.log(px.pname);
+        console.log('getter = '+px.name);
+        let d = new px.Demo("M");
+    </script>
+</body>
+</html>

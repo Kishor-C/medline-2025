@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let id = 200;
+        let name = "Ajay";
+        let age = 35;
+        let url = `www.domain.com/${id}/${name}/${age}`;
+        let oldUrl = "www.domain.com/"+id+"/"+name+"/"+age;
+        let element = `<div>
+                <h2>Hello ${name}, your id ${id}, 
+                    age is ${age}</h2>
+            </div>`;
+        document.write(`<h3>url = ${url}</h3>`);
+        document.write(`<h3>old url = ${oldUrl}</h3>`);
+        document.write(element);
+        // exponential operator 
+        document.write(2 ** 3); // 2 power 3
+        // trailing commas
+        let items = [3, 1, 3, 5, ];
+        document.write("<h2>"+items+"</h2>")
+        // destrucuting array
+        let details = [100, "Raj", 42000];
+        // empId, empName and empSalary
+        let [empId, empName, empSalary, address="NA"] = details;
+        console.log(address+" before bangalore")
+        address = "Bangalore";
+        console.log(address+" after bangalore");
+        document.write(`<p>${empId}, ${empName}, 
+            ${empSalary}, ${address}</p>`);
+        // destructuring the object
+        let user = {userId:200, username: "Alex", 
+        phone: 9393930, addr : {state:"KA", city:"BLR"}};
+        let { userId, username, phone, addr: {state, city} } = user;
+       // let {state, city} = addr;
+        console.log(userId, username, phone, state, city);
+    </script>
+</body>
+</html>

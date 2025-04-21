@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS modern syntax for class and inheritance</h1>
+    <script type = "text/javascript">
+        class Person {
+            // constructor keyword for constructors
+            constructor(name, gender) {
+                this.name = name;
+                this.gender = gender;
+            }
+            // inside class function keyword is not allowed
+            display() {
+                console.log('Person Name = '+this.name
+                +', Gender = '+this.gender);
+            }
+        }
+        class Employee extends Person {
+            constructor(id, name, gender, salary) {
+                super(name, gender); // invokes super class constructor
+                this.id = id;
+                this.salary = salary;
+            }
+            
+            // overriding the display
+            display() {
+                console.log('Employee Name = '+this.name
+                +', Gender = '+this.gender);
+                console.log('Id = '+this.id+', Salary = '+this.salary);
+            }
+            
+        }
+        let emp = new Employee(1234, 'Raj', 'Male', 35000);
+        let per = new Person('Rajesh', 'Male');
+        emp.salary2 = -1;
+        emp.display();
+        console.log("________________________________________________-")
+        per.display();
+        
+        
+    </script>
+</body>
+</html>
