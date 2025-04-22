@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Generators Demo: <span id = "s1"></span></h2>
+    <div>
+        <button onclick="handleClick()">Click</button>
+    </div>
+    <script>
+        function* generateNumbers() {
+            console.log('1st line');
+            yield {id: 1, name: "A"};
+            console.log('2nd line');
+            yield {id: 2, name : "B"};
+            console.log('3rd line');
+            yield 3;
+            console.log('4th line');
+            yield "End";
+        }
+        let gen = generateNumbers();
+        function handleClick() {
+            let ele = document.querySelector("#s1");
+            let nextItem = gen.next(); // returns an object having {value, done}
+            console.log(nextItem); //done will be false till all the values are returned
+            ele.innerHTML = nextItem.value;//innerHTML modifies content of element#s1
+        }
+    </script>
+</body>
+</html>

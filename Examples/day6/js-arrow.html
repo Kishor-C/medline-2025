@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Arrow function demo</h2>
+    <script>
+        let price = [100, 200, 500, 400];
+        // you can iterate using inbuilt forEach function 
+        price.forEach(function(value, index){
+            document.write(`<p>value = ${value}, index = ${index}</p>`);
+        });
+        document.write("<p>___________________</p>")
+        price.forEach((value, index) => 
+            document.write(`<p>value = ${value}, index = ${index}</p>`));
+        document.write("<p>Map function</p>");
+        let discountedPrice = price.map(function(value, index){
+            return value * 0.9;
+        });
+        document.write(`<p>Discounted price = ${discountedPrice}</p>`);
+        discountedPrice = price.map((value, index) => value * 0.85);
+        document.write(`<p>Discounted price with map = ${discountedPrice}</p>`);
+        discountedPrice = price.map((value, index) => {
+            let num = 10;
+            return value + 10;
+        });
+        document.write(`<p>Discounted price again with map = ${discountedPrice}</p>`);
+    </script>
+</body>
+</html>

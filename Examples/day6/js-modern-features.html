@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userArray = [
+        {id: 100, name: "Alex", address : {state:"KA", city: "BLR", geo : {long:"9.3", lat:"8.0"}}},
+        {id: 150, name: "David"},
+        {id: 200, name: "Brad", address : {state:"MH", city: "MBI"}},
+        {id: 300, name: "Alex", address : {state:"KA", city: "MYS", geo : {long:"9.0", lat:"8.9"}}},
+        ];
+        for(let user of userArray) {
+           
+           document.write(`<p>Id = ${user.id}, Name = ${user.name},
+             State = ${user.address?.state}, Geo Lat: ${user.address?.geo?.lat}</p>`);
+        }
+        let firstname = 'Sachin';
+        let lastname;
+        let username = firstname ?? lastname ?? 'Guest';
+        document.write(`<p>Hello ${firstname ?? lastname ?? 'Anonymous'}</p>`)
+        document.write(`<p>Hello ${username}</p>`);
+
+        // y is taking rest of the values
+        function sum(x, ...y) {
+            console.log(`x = ${x}, y = ${y}`);
+           
+        }
+        function max(a, b, c, ...d) {
+            console.log(`a = ${a}, b = ${b}, c = ${c}, d = ${d}`)
+        }
+        let items = [20, 10, 30, 40, 80, 90, 20];
+        max(...items);
+        sum(1, 2, 3, 4);
+        sum(50); // x = 50, y = 
+    </script>
+</body>
+</html>
