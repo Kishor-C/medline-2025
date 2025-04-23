@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>All Promise methods</h2>
+    <script>
+        let p1 = Promise.resolve("resturant details");
+        let p2 = Promise.resolve("ratings");
+        let p3 = Promise.reject("menu-failed-loading")
+        let p4 = Promise.resolve("location")
+        let promises;
+        //promises = Promise.all([p1, p2, p3, p4]);
+        //promises = Promise.allSettled([p1, p2, p3, p4])
+        //promises = Promise.race([p1, p2, p3, p4]); // can give the first response which can be success/error
+        promises = Promise.any([p3, p2, p1, p4]); // gives only the first response that is success, if error occurs its ignored
+        promises
+            .then(value => console.log('then: ', value))
+            .catch(value => console.log('catch: ', value));
+
+    </script>
+</body>
+</html>

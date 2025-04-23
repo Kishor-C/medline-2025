@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="fetchData()">Fetch Old Api</button>
+        <button onclick="fetchDataWithPromise()">Fetch With Promise</button>
+        <button onclick="fetchDataWithAsyncAwait()">Fetch With Async/Await</button>
+    </div>
+   
+    <div id = "d1">
+
+    </div>
+    <script>
+
+        // string padding - padStart() & padEnd()
+        let phone = '999384';
+        let phoneEncr = phone.padEnd(10, 'x');
+        let phoneEncr2 = phone.padStart(10, 'x');
+        console.log('phoneEncr = ', phoneEncr);
+        console.log('phoneEncr2 = ', phoneEncr2);
+        async function fetchDataWithAsyncAwait() {
+            let url = 'https://jsonplaceholder.typicode.com/users';
+            let r = await fetch(url); // waits for fetch to settle & then goes to the next line
+            let v = await r.json(); // waits for the stream to be read & converted to the json
+            document.querySelector("#d1").textContent = JSON.stringify(v);
+        }
+        function fetchDataWithPromise() {
+            let url = 'https://jsonplaceholder.typicode.com/users';
+            fetch(url)
+            .then(value => value.json())
+            .then(value => document.querySelector("#d1").textContent = JSON.stringify(value))
+            .catch(value => console.log('error: ', value))
+        }
+        function fetchData() {
+            let url = 'https://jsonplaceholder.typicode.com/users';
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.send();
+            xhr.onreadystatechange = () => {
+                    // xhr.readyState = 1, 2, 3, 4, xhr.responseText
+                    if(xhr.readyState == 4) {
+                        let text = xhr.responseText;
+                        document.querySelector("#d1").textContent = text;
+                    }
+            };
+        }
+    </script>
+</body>
+</html>
