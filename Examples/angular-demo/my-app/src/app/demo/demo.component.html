@@ -1,0 +1,21 @@
+<div>
+    <h2>{{message}}</h2>
+    <div>
+        <h2>Using custom pipe : nameFormatter</h2>
+        <h3>Hello {{person.name|nameFormatter}}</h3>
+        <h3>Hello {{user1.username|nameFormatter:user1.gender}}</h3>
+        <h3>Hello {{user2.username|nameFormatter:user2.gender}}</h3>
+    </div>
+    <div>
+        <h2>Name: {{person.name | uppercase }}</h2>
+        <h3>Dob: {{person.dob}}</h3>
+        <h3>Salary: {{person.salary}}</h3>
+    </div>
+    <div>
+        <h2>Using inbuilt pipes | </h2>
+        <h2>Name: {{person.name | uppercase}}</h2>
+        <h3>Dob: {{person.dob | date : 'dd-MMM-yyyy'}}</h3>
+        <h3>Salary: {{person.salary | currency: 'INR'}}</h3>
+        <h3>{{person | json}}</h3>
+    </div>
+</div>
