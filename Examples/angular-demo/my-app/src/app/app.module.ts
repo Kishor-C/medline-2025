@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { DemoComponent } from './demo/demo.component';
 import { NameFormatterPipe } from './name-formatter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { NameFormatterPipe } from './name-formatter.pipe';
     NameFormatterPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

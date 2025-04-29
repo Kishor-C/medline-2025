@@ -1,5 +1,24 @@
 <div>
-    <h2>{{message}}</h2>
+    <div>
+        <h2 [class.toggle] = "!isDisabled">Class Toggle</h2>
+        <h2 [class.danger] = "isDisabled">Class Binding</h2>
+    </div>
+    <h2 [style] = "mystyles">{{message}}</h2>
+    <div>
+        <h2>Two way data binding ngModel</h2><hr />
+        <input type = "text" [(ngModel)] = "message" placeholder="Enter a message"/>
+    </div>
+    <div>
+        <h2>Event binding</h2>
+        
+        <input type = "text" #msg (input) = "updateMessage(msg.value)" />
+        <button (click) = "updateMessage(msg.value)" 
+            [disabled]="isDisabled">Update</button>
+    </div>
+    <div>
+        <h2>Property binding</h2>
+        <p>Is disabled: {{isDisabled}}</p>
+    </div>
     <div>
         <h2>Using custom pipe : nameFormatter</h2>
         <h3>Hello {{person.name|nameFormatter}}</h3>
