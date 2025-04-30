@@ -1,0 +1,13 @@
+<div>
+    <h2>Example on *ngIf</h2><hr />
+    <button (click) = "fetchUser()">Button</button><br />
+    <h3>Status: {{status}}</h3>
+    <h3 *ngIf = "username">Hello {{username}}</h3>
+    <h3 *ngIf = "status">{{message}}</h3>
+    <h2>Example on ngSwitch</h2>
+    <div [ngSwitch] = "userRole.type">
+        <h3 *ngSwitchCase="'admin'">Welcome Admin</h3>
+        <h3 *ngSwitchCase="'user'">Welcome User</h3>
+        <h3 *ngSwitchDefault>Welcome Guest</h3>
+    </div>
+</div>

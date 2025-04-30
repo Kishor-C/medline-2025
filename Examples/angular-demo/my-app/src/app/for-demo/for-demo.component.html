@@ -1,0 +1,25 @@
+<div>
+    <h2>Products List:-</h2>
+    <ol>
+        <li *ngFor = "let product of products">
+            {{product}}
+        </li>
+    </ol>
+    <h2>User List:-</h2>
+    <table border = "1">
+        <thead>
+            <tr>
+                <th>Id</th><th>Name</th>
+                <th>Gender</th><th>Birthday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let u of users">
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.gender}}</td>
+                <td>{{u.dob}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

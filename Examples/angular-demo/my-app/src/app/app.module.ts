@@ -6,13 +6,23 @@ import { TestComponentComponent } from './test-component/test-component.componen
 import { DemoComponent } from './demo/demo.component';
 import { NameFormatterPipe } from './name-formatter.pipe';
 import { FormsModule } from '@angular/forms';
+import { Test2Component } from './test2/test2.component';
+import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
+import { ForDemoComponent } from './for-demo/for-demo.component';
+import { ImpurePipe } from './impure.pipe';
+import { PureAndImpureComponent } from './pure-and-impure/pure-and-impure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponentComponent,
     DemoComponent,
-    NameFormatterPipe
+    NameFormatterPipe,
+    Test2Component,
+    StructuralDirectiveComponent,
+    ForDemoComponent,
+    ImpurePipe,
+    PureAndImpureComponent
   ],
   imports: [
     BrowserModule, FormsModule
