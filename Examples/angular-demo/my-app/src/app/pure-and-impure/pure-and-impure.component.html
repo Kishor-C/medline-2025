@@ -8,4 +8,8 @@
         <button (click) = "updateDate()">Date Update</button>
         <button (click) = "updateFirstname()">Firstname Update</button>
     </div>
+    <div>Understanding the pipe precendence</div>
+    <h2>
+        {{(10 > 5 ? "Hello World" : "Thank you" )| uppercase}}
+    </h2>
 </div>

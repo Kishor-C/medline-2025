@@ -1,0 +1,17 @@
+<div class="alert alert-primary">
+    <h2 class="w-50">This is parent component</h2>
+    <label>Enter name:-</label>
+    <input type = "text" class="w-25 form-control" [(ngModel)] = "nameValue" />
+    <div class="alert alert-secondary">
+        <app-child [username] = "nameValue"></app-child>
+    </div>
+
+    <div class="w-50 alert alert-warning">
+        <h3>Parent component passing array of values to the child</h3>
+        <app-child [username] = "namesList[0]"></app-child>
+        <h3>Passing each value with the *ngFor</h3>
+        <div *ngFor = "let user of namesList">
+            <app-child [username] = "user"></app-child>
+        </div>
+    </div>
+</div>
