@@ -1,6 +1,19 @@
 <div class="container-fluid">
   <h1 class="alert alert-primary text-center">This is App Component</h1>
-  <app-parent></app-parent>
+
+  <button (click) = "toggle()">Toggle: {{show}}</button>
+  <input type = "text" [(ngModel)] = "username" />
+<div *ngIf = "show">
+  <app-life-cycle [username] = "username"></app-life-cycle>
+</div>
+
+<!-- 
+  <app-parent3></app-parent3> -->
+
+  <!-- <app-parent-two /> -->
+
+
+  <!-- <app-parent></app-parent> -->
 <!-- 
   <button class="btn btn-primary">Small Button</button> <br /><br />
   

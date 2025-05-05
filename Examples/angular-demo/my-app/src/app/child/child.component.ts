@@ -8,6 +8,12 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent {
 
-  @Input()
+  @Input({transform : capitalize})
   username = "Guest";
+
+  @Input({required : true})
+  product : string | undefined = undefined;
+}
+function capitalize(value : string) {
+  return value.toUpperCase();
 }

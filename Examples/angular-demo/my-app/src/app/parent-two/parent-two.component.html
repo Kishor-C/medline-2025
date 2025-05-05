@@ -1,0 +1,7 @@
+<div>
+    <h2>Parent Two</h2>
+    <h3>Child Value : {{childValue}}</h3>
+    <hr />
+    <!-- <app-child-two (numberEmitter)="childValue=$event"></app-child-two> -->
+    <app-child-two (numberEmitter)="getValue($event)"></app-child-two>
+</div>

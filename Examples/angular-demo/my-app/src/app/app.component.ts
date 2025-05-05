@@ -9,5 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
   username = "Kishor";
+  show = false;
   
+  toggle() {
+    this.show = !this.show;
+  }
 }

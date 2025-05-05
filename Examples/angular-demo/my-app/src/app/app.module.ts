@@ -14,6 +14,12 @@ import { PureAndImpureComponent } from './pure-and-impure/pure-and-impure.compon
 import { ToggleDirective } from './toggle.directive';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ParentTwoComponent } from './parent-two/parent-two.component';
+import { ChildTwoComponent } from './child-two/child-two.component';
+import { Parent3Component } from './parent3/parent3.component';
+import { Child3Component } from './child3/child3.component';
+import { LifeCyleComponent } from './life-cyle/life-cyle.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { ChildComponent } from './child/child.component';
     PureAndImpureComponent,
     ToggleDirective,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ParentTwoComponent,
+    ChildTwoComponent,
+    Parent3Component,
+    Child3Component,
+    LifeCyleComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule, FormsModule
