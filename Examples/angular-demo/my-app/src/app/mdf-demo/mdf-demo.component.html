@@ -1,0 +1,25 @@
+<div class="w-75">
+    <form [formGroup] = "user" (ngSubmit) = "handleSubmit()">
+        <div>
+            <input formControlName="firstname">
+        </div>
+        <div>
+            <input formControlName="lastname">
+            <span *ngIf="user.controls['lastname'].invalid" class="text-danger">
+                Lastname is required
+            </span>
+        </div>
+        <div>
+            <input formControlName="phone">
+        </div>
+        <div>
+            <input type = "submit" value = "Register">
+        </div>
+    </form>
+
+    <div>
+        {{user.value | json}}
+        <div>Form valid: {{user.valid}}</div>
+        <div>Lastname touched: {{user.controls['lastname'].touched}}</div>
+    </div>
+</div>

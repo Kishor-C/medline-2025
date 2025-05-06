@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { DemoComponent } from './demo/demo.component';
 import { NameFormatterPipe } from './name-formatter.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Test2Component } from './test2/test2.component';
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
 import { ForDemoComponent } from './for-demo/for-demo.component';
@@ -21,6 +21,7 @@ import { Child3Component } from './child3/child3.component';
 import { LifeCyleComponent } from './life-cyle/life-cyle.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
+import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +43,11 @@ import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
     Child3Component,
     LifeCyleComponent,
     LifeCycleComponent,
-    TdfDemoComponent
+    TdfDemoComponent,
+    MdfDemoComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
