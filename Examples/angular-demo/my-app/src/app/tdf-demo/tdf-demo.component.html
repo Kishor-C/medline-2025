@@ -1,0 +1,27 @@
+<div class="w-75">
+    <h1>Simple Form</h1>
+    <!-- #user stores all the form control data with [(ngModel)]-->
+     <!-- user.value will store all the control data in js object form-->
+    <form #user = "ngForm" (ngSubmit) = "handleSubmit(user.value)">
+        <div class="mb-3">
+            <input type = "text" name = "first" [(ngModel)] = "firstname" required minlength="4" 
+                autocomplete="off" #fn="ngModel" class="form-control-lg" placeholder="Enter firstname">
+            <span class="text-danger" *ngIf = "fn.invalid && (fn.dirty || fn.touched)">
+                    Username is required with minimum 4 characters 
+            </span>
+        </div>
+        <div class="mb-3">
+            <input type = "text" name = "last" [(ngModel)] = "lastname" required minlength="2" 
+                autocomplete="off" #ln="ngModel" class="form-control-lg" placeholder="Enter lastname">
+        </div>
+        <div class="mb-3">
+            <input type = "submit" value = "Submit" [disabled] = "user.invalid" 
+                class = "btn btn-primary btn-lg">
+        </div>
+    </form>
+    <div>
+        <p>Form valid: {{user.valid}}, Form Invalid: {{user.invalid}}</p>
+        <p>Firstname valid: {{fn.valid}}, invalid: {{fn.invalid}} 
+            dirty: {{fn.dirty}}, touched: {{fn.touched}}</p>
+    </div>
+</div>

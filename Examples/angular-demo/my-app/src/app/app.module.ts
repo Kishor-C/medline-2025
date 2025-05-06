@@ -20,6 +20,7 @@ import { Parent3Component } from './parent3/parent3.component';
 import { Child3Component } from './child3/child3.component';
 import { LifeCyleComponent } from './life-cyle/life-cyle.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     Parent3Component,
     Child3Component,
     LifeCyleComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    TdfDemoComponent
   ],
   imports: [
     BrowserModule, FormsModule
