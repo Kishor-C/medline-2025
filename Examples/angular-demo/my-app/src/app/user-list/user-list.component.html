@@ -1,0 +1,15 @@
+<div>
+    <h2>User List component</h2>
+    <div class="mb-3">
+         <button class="btn btn-primary btn-lg" (click) = "handleClick()">Subscribe</button>
+    </div>
+    <div class="mb-3">
+         <button class="btn btn-danger btn-lg" (click) = "unsubscribe()">UnSubscribe</button>
+    </div>
+   <div>
+    {{userItems | json}}
+   </div>
+   <div>
+    {{item | json}}
+   </div>
+</div>

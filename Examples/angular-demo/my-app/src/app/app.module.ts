@@ -22,6 +22,7 @@ import { LifeCyleComponent } from './life-cyle/life-cyle.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
 import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
     LifeCyleComponent,
     LifeCycleComponent,
     TdfDemoComponent,
-    MdfDemoComponent
+    MdfDemoComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule
