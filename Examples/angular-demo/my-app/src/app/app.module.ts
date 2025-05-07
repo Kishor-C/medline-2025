@@ -23,6 +23,8 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
 import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { TodoAddComponent } from './todo-add/todo-add.component';
+import { TodoReadComponent } from './todo-read/todo-read.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { UserListComponent } from './user-list/user-list.component';
     LifeCycleComponent,
     TdfDemoComponent,
     MdfDemoComponent,
-    UserListComponent
+    UserListComponent,
+    TodoAddComponent,
+    TodoReadComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule

@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { User, USERS } from './user-mock';
 import { Observable, of } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class UserService {
-
   constructor() { }
+
+  // using a method that returns promise using async await, a function with async/await returns Promise
+  async getUsers2() : Promise<User> {
+    return await Promise.resolve(USERS[0]);
+  }
 
   // method that returns observables
   getUsers() : Observable<User> {
@@ -24,4 +26,6 @@ export class UserService {
       return () => {console.log('unsubscribing....'); clearInterval(timerId)};
     });
   }
+
+  
 }

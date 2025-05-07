@@ -14,6 +14,9 @@ export class UserListComponent {
   private _service : UserService = inject(UserService);
   userItems : User[] = []; // to display all the users emitted from the observable
   private _subscriber !: Subscription;
+  handleClick2() {
+    this._service.getUsers2().then(value => console.log(value))
+  }
   handleClick() {
     // subscribe takes an object with 3 properties next, error, complete
     this._subscriber = this._service.getUsers().subscribe({
@@ -25,5 +28,6 @@ export class UserListComponent {
   // unsubsribe from the observable
   unsubscribe() {
     this._subscriber.unsubscribe();
+    this.handleClick2(); // to avoid creating another button we are invoking here
   }
 }
