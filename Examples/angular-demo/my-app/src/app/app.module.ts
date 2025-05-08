@@ -25,6 +25,8 @@ import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoReadComponent } from './todo-read/todo-read.component';
+import { provideHttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +57,7 @@ import { TodoReadComponent } from './todo-read/todo-read.component';
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
