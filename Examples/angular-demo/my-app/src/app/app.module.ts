@@ -26,6 +26,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { TodoAddComponent } from './todo-add/todo-add.component';
 import { TodoReadComponent } from './todo-read/todo-read.component';
 import { provideHttpClient } from '@angular/common/http';
+import { UserStoreComponent } from './user-store/user-store.component';
+import { UserReadComponent } from './user-read/user-read.component';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { provideHttpClient } from '@angular/common/http';
     MdfDemoComponent,
     UserListComponent,
     TodoAddComponent,
-    TodoReadComponent
+    TodoReadComponent,
+    UserStoreComponent,
+    UserReadComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule
