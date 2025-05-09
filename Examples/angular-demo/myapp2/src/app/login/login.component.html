@@ -1,0 +1,24 @@
+<div class="w-50">
+    <h3>Login Form</h3>
+    <div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-3">
+                <input type = "text" 
+                    formControlName="username"
+                    placeholder="Enter username"
+                    class="form-control form-control-lg"
+                    >
+            </div>  
+            <div class="mb-3">
+                <input type="submit" 
+                    value="Login"
+                    class="btn btn-primary btn-lg"
+                    >
+
+            </div>
+        </form>
+    </div>
+    <div>
+        <a routerLink = "/register">Create User</a>
+    </div>
+</div>
