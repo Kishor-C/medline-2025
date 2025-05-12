@@ -17,9 +17,12 @@ export class LoginComponent {
   });
   
   login() {
-    let username = this.loginForm.value['username'];
+    let username : string = <string>this.loginForm.value['username'];
     //console.log(username);
     // routerLink = 'success/:user'
-    this._router.navigate(['success'], {queryParams : {user: username}, skipLocationChange:true}); 
+    //this._router.navigate(['success'], {queryParams : {user: username}, skipLocationChange:true}); 
+    // success/:user
+    sessionStorage.setItem('un', username);
+    this._router.navigate(['success', username]);
   }
 }

@@ -1,3 +1,10 @@
 <div>
     <h3>Hello {{username}}</h3>
+    <div>
+        <a routerLink = "home" class="btn btn-primary btn-lg">Home</a> &nbsp;
+        <a routerLink = "profile" class="btn btn-primary btn-lg">Profile</a> &nbsp;
+        <a routerLink = "settings" class="btn btn-primary btn-lg">Settings</a> &nbsp;
+        <a routerLink = "/login" class="btn btn-primary btn-lg">Logout</a> &nbsp;
+    </div>
+    <router-outlet></router-outlet>
 </div>

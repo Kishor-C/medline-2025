@@ -3,6 +3,11 @@ import { LoginComponent } from "./login/login.component"
 import { RegisterComponent } from "./register/register.component"
 import { SuccessComponent } from "./success/success.component"
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component"
+import { DashboardComponent } from "./dashboard/dashboard.component"
+import { HomeComponent } from "./home/home.component"
+import { ProfileComponent } from "./profile/profile.component"
+import { SettingsComponent } from "./settings/settings.component"
+import { authGuard } from "./auth.guard"
 
 /*
     we must configure this routes in the app.config.ts
@@ -11,7 +16,13 @@ export const routes : Routes = [
     
     {path : 'login', component : LoginComponent},
     {path : 'register', component : RegisterComponent},
-    {path : 'success', component : SuccessComponent},
+    {path : 'success/:user', component : SuccessComponent, canActivate : [authGuard], children : [
+        {path:'dashboard', component : DashboardComponent},
+        {path:'home', component : HomeComponent},
+        {path:'profile', component: ProfileComponent},
+        {path:'settings', component: SettingsComponent},
+        {path:'', redirectTo: 'dashboard', pathMatch: 'full'}
+    ]},
     {path : '', redirectTo : 'login', pathMatch : 'full'},
     {path : '**', component : PageNotFoundComponent}
 ]

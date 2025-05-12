@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-success',
-  imports: [],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './success.component.html',
   styleUrl: './success.component.css'
 })
@@ -14,8 +14,11 @@ export class SuccessComponent implements OnInit {
   username !: string;
   ngOnInit(): void {
       // read the query parameter and set the value to the username
-      this._activatedRoute.queryParamMap.subscribe({
-        next : value => this.username = <string>value.get('user')
+      // this._activatedRoute.queryParamMap.subscribe({
+      //   next : value => this.username = <string>value.get('user')
+      // });
+      this._activatedRoute.paramMap.subscribe({
+        next: value => this.username = <string>value.get('user'),
       });
   }
 
